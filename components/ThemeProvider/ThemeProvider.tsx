@@ -1,4 +1,4 @@
-import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider as MuiThemeProvider, createTheme, StyledEngineProvider } from '@mui/material/styles';
 import { ReactElement } from 'react';
 
 export const theme = createTheme({
@@ -103,7 +103,9 @@ export type ThemeProviderPropsType = {
 export type ThemeProviderType = (props: ThemeProviderPropsType) => ReactElement;
 
 const ThemeProvider: ThemeProviderType = ({ children }) => (
-  <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>
+  <StyledEngineProvider injectFirst>
+    <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>
+  </StyledEngineProvider>
 );
 
 export default ThemeProvider;
