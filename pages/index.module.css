@@ -1,0 +1,14 @@
+.root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.registrationFormPaper {
+  padding: 35px 50px;
+  width: 570px;
+  box-shadow: 0 16px 48px 20px rgba(35, 37, 46, 0.1);
+}
