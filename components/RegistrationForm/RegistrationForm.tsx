@@ -179,8 +179,9 @@ const RegistrationForm: RegistrationFormType = () => {
         open={openSuccessMessage}
         autoHideDuration={6000}
         onClose={handleCloseSuccessMessage}
-        message="You have been successfully registered"
-      />
+      >
+        <Alert severity="success" onClose={handleCloseSuccessMessage}>You have been successfully registered</Alert>
+      </Snackbar>
       <Snackbar open={openErrorMessage}>
         <Alert severity="error" onClose={handleCloseErrorMessage}>Unexpected error. Please try again later.</Alert>
       </Snackbar>
