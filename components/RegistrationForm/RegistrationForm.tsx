@@ -179,11 +179,27 @@ const RegistrationForm: RegistrationFormType = () => {
         open={openSuccessMessage}
         autoHideDuration={6000}
         onClose={handleCloseSuccessMessage}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
-        <Alert severity="success" onClose={handleCloseSuccessMessage}>You have been successfully registered</Alert>
+        <Alert
+          variant="filled"
+          severity="success"
+          onClose={handleCloseSuccessMessage}
+        >
+          You have been successfully registered
+        </Alert>
       </Snackbar>
-      <Snackbar open={openErrorMessage}>
-        <Alert severity="error" onClose={handleCloseErrorMessage}>Unexpected error. Please try again later.</Alert>
+      <Snackbar
+        open={openErrorMessage}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert
+          variant="filled"
+          severity="error"
+          onClose={handleCloseErrorMessage}
+        >
+          Unexpected error. Please try again later.
+        </Alert>
       </Snackbar>
     </Form>
   );

@@ -1,3 +1,7 @@
+import nextJest from 'next/jest';
+
+const createJestConfig = nextJest({ dir: process.cwd() });
+
 const config = {
   moduleDirectories: ['node_modules', '<rootDir>'],
   testEnvironment: 'jsdom',
@@ -13,13 +17,6 @@ const config = {
     'components/**/*.{ts,tsx}',
     'utils/**/*.{ts,tsx}',
   ],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/dist/',
-  ],
-  moduleNameMapper: {
-    '\\.(css|less|scss|sss|styl)$': '<rootDir>/node_modules/jest-css-modules',
-  },
 };
 
-export default config;
+export default createJestConfig(config);
